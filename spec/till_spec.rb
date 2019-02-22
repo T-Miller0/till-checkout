@@ -1,7 +1,7 @@
 require 'till'
 
-describe "takes user's imput returns price" do
+describe Till do
   it 'maps through array returning price' do
-    expect(subject.checkout("Flat White"))to eq('"Flate White"=>4.75')
+    expect(subject.checkout("Flat White")).to eq ('Flat White 4.75')
   end
 end
