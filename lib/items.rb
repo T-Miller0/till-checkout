@@ -3,7 +3,7 @@ require 'rubygems'
 
 class Items
 
-  def menu_to_array
+  def menu
     file = File.read('./hipstercoffee.json')
     data = JSON.parse(file)
     puts data[0]['prices']
