@@ -1,12 +1,17 @@
 require 'json'
-# require 'hipstercoffee.json'
+require 'rubygems'
 
 class Items
 
-  def menu_to_hash
-    include 'json'
-    file = File.open './hipstercoffee.json'
+  # attr_reader :data
+
+  # def initialize
+  #   @data = data
+  # end
+
+  def menu_to_array
+    file = File.read('./hipstercoffee.json')
     data = JSON.parse(file)
-    puts data
-  end
+    return data[0]["prices"]
+    end
 end
