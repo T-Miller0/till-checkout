@@ -6,7 +6,7 @@ class Items
   def menu
     file = File.read('./hipstercoffee.json')
     data = JSON.parse(file)
-    puts data[0]['prices']
-    return data[0]["prices"]
+    coffee_menu = data[0]["prices"]
+    return coffee_menu.first
     end
 end
