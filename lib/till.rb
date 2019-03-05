@@ -9,9 +9,8 @@ class Till
   end
 
   def checkout(order)
-    return @items.menu
     price = items.menu.select{|key, val| key[(order)]}
-    @total.push(price.join)
-    return order + " " + price.join
+    @total.push(price)
+    return @total
   end
 end
